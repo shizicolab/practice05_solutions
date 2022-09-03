@@ -163,14 +163,13 @@ public class Main {
         System.out.println(k / 100); //int returns integer - if it was float then we could have used Math.floor
 
         //22
-        int grade;
-        int gradeSum;
-        int gradeAmount = 0;
-        do {
-            grade = scan.nextInt();
-            gradeSum =+ grade;
+        grade = scan.nextInt();
+//
+        while (grade != -1) {
+            gradeSum += grade;
             gradeAmount++;
-        } while (grade != -1);
+            grade = scan.nextInt();
+        }
 
         System.out.println(gradeSum / gradeAmount);
 
